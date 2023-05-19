@@ -10,6 +10,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: aliceblue;
 }
 
 .container{
@@ -107,4 +108,12 @@ body{
   font-size: 18px;
   font-weight: 900;
   display: none;
+}
+
+
+@media (min-width: 500px) {
+  .container form{
+    display: block !important;
+  }
+  
 }
