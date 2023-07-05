@@ -26,6 +26,9 @@ function signuphandler(){
     .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
+        if(user){
+          location.href = './login/index.html'
+        }
   })
   .catch((error) => {
     console.log("Nahi chala mein kya kar le ga to");
