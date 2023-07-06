@@ -30,13 +30,12 @@ function signuphandler(){
     createUserWithEmailAndPassword(auth, email.value, password.value)
     .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
         if(user){
           pushdatatodbhandler();
         }
       })
       .catch((error) => {
-        console.log("Nahi chala mein kya kar le ga haan");
+        console.log(error);
       });
 }
 
@@ -52,7 +51,7 @@ async function pushdatatodbhandler(){
       console.log("Document written with ID: ", docRef.id);
       location.href = './login/index.html'
     } catch (e) {
-    console.error("Error adding document: ", e);
+    console.error(e);
   }
 }
 else{

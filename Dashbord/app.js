@@ -17,8 +17,7 @@ const db = getFirestore(app);
 async function falto(){
         const querySnapshot = await getDocs(collection(db, "users"));
         querySnapshot.forEach((doc) => {
-            document.querySelector('body').innerHTML += doc.data().text + "<br />";
-            console.log(doc.data());
+            document.querySelector('.body').innerHTML += doc.data().text + "<br />";
         });
 
 }
